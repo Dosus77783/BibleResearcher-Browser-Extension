@@ -6,10 +6,17 @@
   "author": "Dmitri Suslov",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:extension": "tsc --project extension/tsconfig.json",
+    "build:functions": "tsc --project functions/tsconfig.json",
+    "build": "npm run build:extension && npm run build:functions",
+    "watch:extension": "tsc --watch --project extension/tsconfig.json",
+    "watch:functions": "tsc --watch --project functions/tsconfig.json"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
     "web-ext": "^8.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2"
   }
 }
