@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Bible Researcher",
+    "version": "1.0.0",
+    "description": "An extentsion to help with Bible research. Setup options for standard translations and highlight text to find more info on etymology, Strong's Condordance numbers, Biblical usage, definitions, and many other resources. This is an extension that helps consolidate many resources into 1 area.",
+    "permissions": ["contextMenus", "storage", "activeTab"],
+    "host_permissions": ["*://*/*"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts":[
+        {
+            "matches": ["*://*/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "action":{
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icon.png",
+            "48": "icon.png",
+            "128": "icon.png"
+        }
+    },
+    "options_page": "options.html"
+}

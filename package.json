@@ -1,0 +1,15 @@
+{
+  "name": "bible-researcher",
+  "version": "1.0.0",
+  "description": "An extentsion to help with Bible research. Setup options for standard translations and highlight text to find more info on etymology, Strong's Condordance numbers, Biblical usage, definitions, and many other resources. This is an extension that helps consolidate many resources into 1 area.",
+  "license": "AGPL-3.0-or-later",
+  "author": "Dmitri Suslov",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "web-ext": "^8.4.0"
+  }
+}
