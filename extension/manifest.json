@@ -4,23 +4,18 @@
     "version": "1.0.0",
     "description": "An extentsion to help with Bible research. Setup options for standard translations and highlight text to find more info on etymology, Strong's Condordance numbers, Biblical usage, definitions, and many other resources. This is an extension that helps consolidate many resources into 1 area.",
     "permissions": ["contextMenus", "storage", "activeTab"],
-    "host_permissions": ["*://*/*"],
+    "host_permissions": ["<all_urls>"],
     "background": {
-        "service_worker": "background.js"
+        "service_worker": "scripts/background.js"
     },
     "content_scripts":[
         {
-            "matches": ["*://*/*"],
-            "js": ["content.js"]
+            "matches": ["<all_urls>"],
+            "js": ["scripts/content.js"]
         }
     ],
     "action":{
-        "default_popup": "popup.html",
-        "default_icon": {
-            "16": "icon.png",
-            "48": "icon.png",
-            "128": "icon.png"
-        }
+        "default_popup": "assets/popup.html"
     },
-    "options_page": "options.html"
+    "options_page": "assets/options.html"
 }

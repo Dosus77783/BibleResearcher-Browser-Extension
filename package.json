@@ -17,6 +17,7 @@
     "web-ext": "^8.4.0"
   },
   "devDependencies": {
+    "@types/chrome": "^0.0.309",
     "typescript": "^5.8.2"
   }
 }
